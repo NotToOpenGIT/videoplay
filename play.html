@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            padding: 0%;
+            margin: 0%;
+            background-color: yellow;
+        }
+
+        div {
+            background-color: whitesmoke;
+            padding: 3%;
+            box-shadow: rgb(121, 116, 116) 0px 0px 10px 10px;
+
+        }
+
+        #inputs {
+            display: flex;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            justify-content: space-between;
+            box-shadow: none;
+        }
+
+        input {
+            background-color: skyblue;
+            color: whitesmoke;
+            font-size: x-large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bolder;
+            padding: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <video src="video.mp4" style="width: 400px; height: 400px;"></video>
+        <br>
+        <div id="inputs">
+            <input type="button" value="FOR>>>" onclick="skip(10)">
+            <input type="button" value="PLAY">
+            <input type="button" value="PAUSE">
+            <input type="button" value="<<BACK" onclick="skip(-10)">
+        </div>
+    </div>
+</body>
+<script>
+
+    let time = 0,
+        vid = document.querySelector("video"),
+        input = document.querySelectorAll("input");
+
+    function skip(v) {
+        vid.currentTime += v;
+    }
+
+    input[1].addEventListener("click", function () {
+        vid.play()
+    })
+    input[2].addEventListener("click", function () {
+        vid.pause()
+    })
+</script>
+
+</html>
