@@ -1,0 +1,67 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    width:100vw;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+@keyframes left{
+    0%{
+        opacity: 0;
+        left: -300px;
+    }
+    100%{
+        opacity: 1;
+        left: 0px;
+    }
+}
+h1{
+    font-size: xx-large;
+    font-weight: bolder;
+    font-family: Geneva, Verdana, sans-serif;
+    margin: 40px 0px;
+    position: relative;
+    animation: left 4s 1 ;
+}
+#bodyClock{
+    position: relative;
+    animation: left 6s 1;;
+    background-color: #444fff;
+    width: 500px;
+    height: 500px;
+    border: 1px dashed yellow;
+    border-width: 5px;
+    border-radius: 180px;
+    padding: 10px;
+    box-shadow: 10px 1px 90px 10px black;
+}
+#bodyClock div{
+    width: 10px;
+    height: 200px;
+    background-color: #09ff00;
+    position: absolute;
+    top:55%;
+    left:50%;
+    transform-origin: top left;
+    border-radius: 100px;
+}
+#bodyClock #Hour{
+    width: 15px;
+    height: 100px;
+    background-color: #fffb00;
+}
+#bodyClock #Min{
+    width: 10px;
+    height: 150px;
+    background-color: #15ff00;
+}
+#bodyClock #Sec{
+    width: 5px;
+    height: 200px;
+    background-color: #ff0000;
+}
